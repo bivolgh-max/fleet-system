@@ -1,6 +1,6 @@
 # Target environment test plan
 
-These checks have NOT been executed in the user's XAMPP installation. Record actual outcomes and screenshots. Do not replace Pending with Pass without performing the steps.
+M01-M15 have NOT been executed in the user's XAMPP installation. Record actual outcomes and screenshots. Do not replace Pending with Pass without performing the steps. M16 was verified separately through GitHub APIs; see [publication evidence](github_publication.md).
 
 | ID | Check and steps | Expected outcome | Actual status |
 |---|---|---|---|
@@ -19,7 +19,7 @@ These checks have NOT been executed in the user's XAMPP installation. Record act
 | M13 | Use desktop and a 390-pixel-wide mobile browser, plus keyboard navigation | Readable layout, labels, focus and accessible navigation | Pending |
 | M14 | Review unexpected input, HTML text and CSRF manipulation in forms | Output escaped; prepared values used; invalid token rejected | Pending |
 | M15 | Run php tests/run.php locally and retain the JSON output | All checks pass; output states its SQLite environment | Pending |
-| M16 | Upload reviewed source and check the real GitHub link | Correct repository opens; configuration/secrets are absent | Pending |
+| M16 | Upload reviewed source and check the real GitHub link | Correct repository opens; configuration/secrets are absent | Pass via GitHub API |
 
 ## Test result record
 

@@ -1,0 +1,188 @@
+{
+  "repository": "https://github.com/bivolgh-max/fleet-system",
+  "default_branch": "main",
+  "visibility": "public",
+  "source_commit": "27b0f81d048dd29392e3578f0047561bc9b57c02",
+  "source_tree": "48469987bbbd0e4c0c5377ff83b38471a9dd3dd8",
+  "verified_at": "2026-10-13T12:44:44.103Z",
+  "verification_environment": "Authenticated GitHub APIs; no application runtime executed",
+  "files_verified": 40,
+  "verification_method": "Compared every published Git blob SHA with the exact UTF-8 content uploaded; fetched README from the default branch.",
+  "checks": {
+    "source_contents": "PASS",
+    "mysql_schema_and_fictional_seed_script_included": "PASS",
+    "readme_retrieval": "PASS",
+    "personal_assessment_documents_absent": "PASS",
+    "local_credentials_and_database_files_absent": "PASS",
+    "recognised_secret_token_and_private_key_patterns": "NONE FOUND"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha": "06801c81ffddbbff0ba5512308b7b8c2f4219664"
+    },
+    {
+      "path": "README.md",
+      "sha": "03909bdf4abc3775d771186a74c558519c9c17fc"
+    },
+    {
+      "path": "app/.htaccess",
+      "sha": "b66e80882967080d48181b5b53a8be18cc94d610"
+    },
+    {
+      "path": "app/FleetRepository.php",
+      "sha": "a47be5d120111a1b865769defa4fa179584ec0ee"
+    },
+    {
+      "path": "app/bootstrap.php",
+      "sha": "1703852b5d2e4085552603dad49b38bc8c1e578c"
+    },
+    {
+      "path": "app/demo_data.php",
+      "sha": "2e93b06d0e1a6fda403879980c548450499763b6"
+    },
+    {
+      "path": "app/functions.php",
+      "sha": "7d3f5120430247761fe8c7609feb0760d94cda56"
+    },
+    {
+      "path": "app/views.php",
+      "sha": "a72c9b8a07432ef01aeedd378b7e4ea2c78d75c9"
+    },
+    {
+      "path": "cli/.htaccess",
+      "sha": "b66e80882967080d48181b5b53a8be18cc94d610"
+    },
+    {
+      "path": "cli/create_admin.php",
+      "sha": "85b32f8427e92dc4eb04ce815b067dc4f10d12ae"
+    },
+    {
+      "path": "cli/seed_demo.php",
+      "sha": "c6ce7d23d3ced9c22c232a26e904dc1c7eefbad9"
+    },
+    {
+      "path": "config/.htaccess",
+      "sha": "b66e80882967080d48181b5b53a8be18cc94d610"
+    },
+    {
+      "path": "config/config.example.php",
+      "sha": "44b52ac7a2f3b3249badb70a5318e440f2ffd77d"
+    },
+    {
+      "path": "database/.htaccess",
+      "sha": "b66e80882967080d48181b5b53a8be18cc94d610"
+    },
+    {
+      "path": "database/erd.drawio",
+      "sha": "bc713be6436a628ea3376edb090d8620c3663646"
+    },
+    {
+      "path": "database/schema.mysql.sql",
+      "sha": "ba551696203bf593b537432ad092bc85229644f2"
+    },
+    {
+      "path": "database/schema.sqlite.sql",
+      "sha": "e3acec24fc7e7fe85a4238b6bdcb37b2d4d7a45d"
+    },
+    {
+      "path": "database/schema_manifest.json",
+      "sha": "6ddf401c1d3cb81ff95aaa2234d9b12acfc37490"
+    },
+    {
+      "path": "database/verification_queries.sql",
+      "sha": "ecaced2cc5d24b0b6455c840c925d5d84257b603"
+    },
+    {
+      "path": "docs/.htaccess",
+      "sha": "b66e80882967080d48181b5b53a8be18cc94d610"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha": "79b289763d36f0edd4e03acd6925656e963965c3"
+    },
+    {
+      "path": "docs/data_dictionary.md",
+      "sha": "0e3a30b2c9f6eb9edea0aabccee022465a12f891"
+    },
+    {
+      "path": "docs/erd.svg",
+      "sha": "be30e462ebf0dc96ae2762c14043c95153bd3de7"
+    },
+    {
+      "path": "docs/github_pages.md",
+      "sha": "c63871dfa85cebae2c0940f65c245cea57afde6f"
+    },
+    {
+      "path": "docs/index.html",
+      "sha": "427950bf7aabaa5007378c9e1d718ac7527cf370"
+    },
+    {
+      "path": "docs/manual_test_plan.md",
+      "sha": "df07b0a4a984e53bc33a0b04d747a407a569b957"
+    },
+    {
+      "path": "docs/project_plan.md",
+      "sha": "5aef065b015a8dc90499f67706481484adfd16e0"
+    },
+    {
+      "path": "docs/user_guide.md",
+      "sha": "b417430104a7be97c29c90230d46e395820cc98a"
+    },
+    {
+      "path": "evidence/automated_tests.json",
+      "sha": "e1e1bbe4b6bbdcc5c1628739b28155a6bcb82815"
+    },
+    {
+      "path": "evidence/http_tests.json",
+      "sha": "d5a1572d124a631df4ce68946a56e3459d0fbfef"
+    },
+    {
+      "path": "evidence/syntax_results.json",
+      "sha": "a8c5ce2a084e3f5a4fcee704d27b3bfc422369fe"
+    },
+    {
+      "path": "package.json",
+      "sha": "2e923f768658a5c7f541ed707b56c3822a039adc"
+    },
+    {
+      "path": "public/.htaccess",
+      "sha": "cc75b016b12d04501566ed98798d8414a21f3fd3"
+    },
+    {
+      "path": "public/assets/style.css",
+      "sha": "df03539905a8999e63e253400979a0645cc1d6bc"
+    },
+    {
+      "path": "public/index.php",
+      "sha": "1ec9bbd8c663ee7b93e746ab3fcf1bdda0990472"
+    },
+    {
+      "path": "tests/.htaccess",
+      "sha": "b66e80882967080d48181b5b53a8be18cc94d610"
+    },
+    {
+      "path": "tests/run.php",
+      "sha": "da47fc63c0f3411adb61196fcf906327c3139991"
+    },
+    {
+      "path": "tests/wasm_checks.mjs",
+      "sha": "d302b0a591c098a03c866ece1b1927134246768c"
+    },
+    {
+      "path": "tests/wasm_http.mjs",
+      "sha": "0d640de4ca35de5760ec1f08f0a565b1b9f6cd83"
+    }
+  ],
+  "github_pages": {
+    "status": "Not verified",
+    "source": "docs/index.html",
+    "expected_url": "https://bivolgh-max.github.io/fleet-system/",
+    "setup_guide": "docs/github_pages.md"
+  },
+  "target_xampp_mysql_checks": "Pending; publication does not establish target deployment or browser usability."
+}
