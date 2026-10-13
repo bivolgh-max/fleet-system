@@ -1,0 +1,115 @@
+{
+  "runtime": "PHP 8.3.33 WebAssembly HTTP simulation",
+  "database": "SQLite test database; not MySQL",
+  "executed_at": "2026-10-13T10:41:26.805Z",
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "H01",
+      "test": "Unauthenticated private page redirects to login",
+      "status": "PASS"
+    },
+    {
+      "id": "H02",
+      "test": "Login page includes CSRF token",
+      "status": "PASS"
+    },
+    {
+      "id": "H03",
+      "test": "Login POST without token is rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "H04",
+      "test": "Valid login redirects and regenerates session",
+      "status": "PASS"
+    },
+    {
+      "id": "H-dashboard",
+      "test": "Authenticated dashboard page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-vehicles",
+      "test": "Authenticated vehicles page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-drivers",
+      "test": "Authenticated drivers page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-assignments",
+      "test": "Authenticated assignments page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-maintenance",
+      "test": "Authenticated maintenance page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-repairs",
+      "test": "Authenticated repairs page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-reports",
+      "test": "Authenticated reports page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-vehicle_form",
+      "test": "Authenticated vehicle_form page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-driver_form",
+      "test": "Authenticated driver_form page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-record_form",
+      "test": "Authenticated record_form page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-vehicle",
+      "test": "Authenticated vehicle page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H16",
+      "test": "Vehicle form POST saves and redirects",
+      "status": "PASS"
+    },
+    {
+      "id": "H17",
+      "test": "Saved vehicle appears in filtered list",
+      "status": "PASS"
+    },
+    {
+      "id": "H18",
+      "test": "Duplicate vehicle form gives validation error",
+      "status": "PASS"
+    },
+    {
+      "id": "H19",
+      "test": "No store cache control and security headers set",
+      "status": "PASS"
+    },
+    {
+      "id": "H20",
+      "test": "Logout POST destroys session and redirects",
+      "status": "PASS"
+    },
+    {
+      "id": "H21",
+      "test": "Private page inaccessible after logout",
+      "status": "PASS"
+    }
+  ]
+}

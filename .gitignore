@@ -1,0 +1,7 @@
+/config/config.local.php
+*.sqlite
+*.db
+*.log
+.env
+/node_modules/
+/tests/.tmp/

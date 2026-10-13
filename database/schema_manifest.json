@@ -1,0 +1,276 @@
+{
+  "users": [
+    {
+      "name": "id",
+      "type": "INT UNSIGNED",
+      "definition": "AUTO_INCREMENT PRIMARY KEY"
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR(100)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "email",
+      "type": "VARCHAR(190)",
+      "definition": "NOT NULL UNIQUE"
+    },
+    {
+      "name": "password_hash",
+      "type": "VARCHAR(255)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "role",
+      "type": "VARCHAR(20)",
+      "definition": "NOT NULL DEFAULT 'admin'"
+    },
+    {
+      "name": "created_at",
+      "type": "DATETIME",
+      "definition": "NOT NULL DEFAULT CURRENT_TIMESTAMP"
+    }
+  ],
+  "vehicles": [
+    {
+      "name": "id",
+      "type": "INT UNSIGNED",
+      "definition": "AUTO_INCREMENT PRIMARY KEY"
+    },
+    {
+      "name": "registration",
+      "type": "VARCHAR(12)",
+      "definition": "NOT NULL UNIQUE"
+    },
+    {
+      "name": "make",
+      "type": "VARCHAR(60)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "model",
+      "type": "VARCHAR(80)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "model_year",
+      "type": "SMALLINT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "mileage",
+      "type": "INT UNSIGNED",
+      "definition": "NOT NULL DEFAULT 0"
+    },
+    {
+      "name": "mot_expiry",
+      "type": "DATE",
+      "definition": "NULL"
+    },
+    {
+      "name": "insurance_expiry",
+      "type": "DATE",
+      "definition": "NULL"
+    },
+    {
+      "name": "next_service_date",
+      "type": "DATE",
+      "definition": "NULL"
+    },
+    {
+      "name": "next_service_mileage",
+      "type": "INT UNSIGNED",
+      "definition": "NULL"
+    },
+    {
+      "name": "status",
+      "type": "VARCHAR(20)",
+      "definition": "NOT NULL DEFAULT 'Available'"
+    },
+    {
+      "name": "archived",
+      "type": "TINYINT(1)",
+      "definition": "NOT NULL DEFAULT 0"
+    },
+    {
+      "name": "created_at",
+      "type": "DATETIME",
+      "definition": "NOT NULL DEFAULT CURRENT_TIMESTAMP"
+    }
+  ],
+  "drivers": [
+    {
+      "name": "id",
+      "type": "INT UNSIGNED",
+      "definition": "AUTO_INCREMENT PRIMARY KEY"
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR(100)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "email",
+      "type": "VARCHAR(190)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "phone",
+      "type": "VARCHAR(25)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "licence_number",
+      "type": "VARCHAR(20)",
+      "definition": "NOT NULL UNIQUE"
+    },
+    {
+      "name": "licence_expiry",
+      "type": "DATE",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "active",
+      "type": "TINYINT(1)",
+      "definition": "NOT NULL DEFAULT 1"
+    },
+    {
+      "name": "created_at",
+      "type": "DATETIME",
+      "definition": "NOT NULL DEFAULT CURRENT_TIMESTAMP"
+    }
+  ],
+  "assignments": [
+    {
+      "name": "id",
+      "type": "INT UNSIGNED",
+      "definition": "AUTO_INCREMENT PRIMARY KEY"
+    },
+    {
+      "name": "vehicle_id",
+      "type": "INT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "driver_id",
+      "type": "INT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "started_at",
+      "type": "DATETIME",
+      "definition": "NOT NULL DEFAULT CURRENT_TIMESTAMP"
+    },
+    {
+      "name": "ended_at",
+      "type": "DATETIME",
+      "definition": "NULL"
+    },
+    {
+      "name": "active_vehicle_id",
+      "type": "INT UNSIGNED",
+      "definition": "GENERATED ALWAYS AS (CASE WHEN ended_at IS NULL THEN vehicle_id ELSE NULL END) STORED"
+    },
+    {
+      "name": "active_driver_id",
+      "type": "INT UNSIGNED",
+      "definition": "GENERATED ALWAYS AS (CASE WHEN ended_at IS NULL THEN driver_id ELSE NULL END) STORED"
+    }
+  ],
+  "maintenance": [
+    {
+      "name": "id",
+      "type": "INT UNSIGNED",
+      "definition": "AUTO_INCREMENT PRIMARY KEY"
+    },
+    {
+      "name": "vehicle_id",
+      "type": "INT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "service_date",
+      "type": "DATE",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "mileage",
+      "type": "INT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "description",
+      "type": "TEXT",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "supplier",
+      "type": "VARCHAR(120)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "cost_pence",
+      "type": "BIGINT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "created_at",
+      "type": "DATETIME",
+      "definition": "NOT NULL DEFAULT CURRENT_TIMESTAMP"
+    }
+  ],
+  "repairs": [
+    {
+      "name": "id",
+      "type": "INT UNSIGNED",
+      "definition": "AUTO_INCREMENT PRIMARY KEY"
+    },
+    {
+      "name": "vehicle_id",
+      "type": "INT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "repair_date",
+      "type": "DATE",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "description",
+      "type": "TEXT",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "supplier",
+      "type": "VARCHAR(120)",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "cost_pence",
+      "type": "BIGINT UNSIGNED",
+      "definition": "NOT NULL"
+    },
+    {
+      "name": "created_at",
+      "type": "DATETIME",
+      "definition": "NOT NULL DEFAULT CURRENT_TIMESTAMP"
+    }
+  ],
+  "login_attempts": [
+    {
+      "name": "email_key",
+      "type": "CHAR(64)",
+      "definition": "PRIMARY KEY"
+    },
+    {
+      "name": "failures",
+      "type": "INT UNSIGNED",
+      "definition": "NOT NULL DEFAULT 0"
+    },
+    {
+      "name": "locked_until",
+      "type": "DATETIME",
+      "definition": "NULL"
+    }
+  ]
+}

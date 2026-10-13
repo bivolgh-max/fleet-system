@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fleet Desk Project Portfolio</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;color:#17243c;background:#f4f7fb;line-height:1.7;margin:0}
+    main{max-width:980px;margin:auto;padding:50px 24px}header{margin-bottom:40px}
+    h1{font-size:42px;line-height:1.2;margin:12px 0}h2{font-size:23px}
+    small{letter-spacing:1px;color:#52617b}
+    section{background:white;border:1px solid #d7e0ed;border-radius:14px;padding:25px;margin:20px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.grid section{margin:0}
+    a{color:#2454ba}a:focus-visible{outline:3px solid #2454ba;outline-offset:4px}
+    code{background:#edf2fa;padding:2px 5px}img{width:100%;height:auto}
+    li{margin:8px 0}footer{margin-top:35px;color:#53637a}
+    @media(max-width:650px){h1{font-size:31px}.grid{grid-template-columns:1fr}main{padding:30px 18px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <small>PFD200 COMPUTING PROJECT</small>
+    <h1>Fleet Desk</h1>
+    <p>Vehicle Fleet Maintenance and Compliance System for a fictional small business. A local PHP/MySQL mini project focused on relational design, validation and testing.</p>
+    <p><a href="https://github.com/bivolgh-max/fleet-system">View the project repository</a> · <a href="https://github.com/bivolgh-max/fleet-system/blob/main/README.md">Installation instructions</a></p>
+  </header>
+  <div class="grid">
+    <section>
+      <h2>Business problem</h2>
+      <p>Organise vehicle information, driver allocation, service records, repair costs and manually entered expiry dates in one small application.</p>
+    </section>
+    <section>
+      <h2>Technical scope</h2>
+      <p>PHP, PDO, MySQL or MariaDB, HTML and local CSS. Administrator login, retained assignment history, warning rules and exact integer-pence cost reporting.</p>
+    </section>
+  </div>
+  <section>
+    <h2>Design and planning</h2>
+    <ul>
+      <li><a href="https://github.com/bivolgh-max/fleet-system/blob/main/docs/project_plan.md">Requirements and project plan</a></li>
+      <li><a href="https://github.com/bivolgh-max/fleet-system/blob/main/docs/architecture.md">Architecture and technical decisions</a></li>
+      <li><a href="https://github.com/bivolgh-max/fleet-system/blob/main/docs/data_dictionary.md">Data dictionary</a></li>
+      <li><a href="erd.svg">Entity relationship diagram</a></li>
+      <li><a href="https://github.com/bivolgh-max/fleet-system/blob/main/docs/user_guide.md">User guide</a></li>
+    </ul>
+    <img src="erd.svg" alt="ERD showing vehicle and driver assignment history, maintenance and repairs, and separate authentication tables">
+  </section>
+  <section>
+    <h2>Verification evidence</h2>
+    <p>70 validation and repository checks passed, together with 21 simulated HTTP checks, using PHP 8.3.33 WebAssembly and SQLite.</p>
+    <p><a href="https://github.com/bivolgh-max/fleet-system/blob/main/evidence/automated_tests.json">Automated results</a> · <a href="https://github.com/bivolgh-max/fleet-system/blob/main/evidence/http_tests.json">HTTP simulation results</a></p>
+    <p>MySQL deployment, Apache restrictions, multi-session concurrency and genuine browser usability still require checks in the target environment. The <a href="https://github.com/bivolgh-max/fleet-system/blob/main/docs/manual_test_plan.md">target environment test plan</a> records their status separately.</p>
+  </section>
+  <section>
+    <h2>Run the application</h2>
+    <p>This page presents the project. Install the PHP application and MySQL database locally using the <a href="https://github.com/bivolgh-max/fleet-system/blob/main/README.md">README</a>. GitHub Pages does not execute the PHP/MySQL system.</p>
+    <p>Manual dates and licence formats are not verified against DVLA or insurers. This learning prototype is not a certified compliance service.</p>
+    <p><a href="https://github.com/bivolgh-max/fleet-system">Repository: bivolgh-max/fleet-system</a></p>
+  </section>
+  <footer>Prepared with AI assistance. Personal contribution, understanding and assessment declarations must be represented accurately.</footer>
+</main>
+</body>
+</html>

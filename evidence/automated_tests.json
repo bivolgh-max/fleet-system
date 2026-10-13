@@ -1,0 +1,360 @@
+{
+    "runtime": "8.3.33",
+    "database": "SQLite in-memory test schema",
+    "executed_at": "2026-10-13T11:41:25+01:00",
+    "total": 70,
+    "passed": 70,
+    "failed": 0,
+    "tests": [
+        {
+            "id": "A01",
+            "test": "Valid and leap-year dates",
+            "status": "PASS"
+        },
+        {
+            "id": "A02",
+            "test": "Impossible calendar date rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "A03",
+            "test": "Non-ISO date rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "A04",
+            "test": "Optional dates remain null",
+            "status": "PASS"
+        },
+        {
+            "id": "A05",
+            "test": "Missing dates do not imply compliance",
+            "status": "PASS"
+        },
+        {
+            "id": "A06",
+            "test": "Expired date is overdue",
+            "status": "PASS"
+        },
+        {
+            "id": "A07",
+            "test": "Expiry today is due soon not yet expired",
+            "status": "PASS"
+        },
+        {
+            "id": "A08",
+            "test": "30 day inclusive alert boundary",
+            "status": "PASS"
+        },
+        {
+            "id": "A09",
+            "test": "31 day date is current",
+            "status": "PASS"
+        },
+        {
+            "id": "A10",
+            "test": "Currency is stored as exact pence",
+            "status": "PASS"
+        },
+        {
+            "id": "A11",
+            "test": "Negative costs rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "A12",
+            "test": "More than two decimal places rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "A13",
+            "test": "SQL text cannot become numeric input",
+            "status": "PASS"
+        },
+        {
+            "id": "A14",
+            "test": "HTML output is escaped",
+            "status": "PASS"
+        },
+        {
+            "id": "A15",
+            "test": "Array inputs rejected safely",
+            "status": "PASS"
+        },
+        {
+            "id": "A16",
+            "test": "Registration normalised",
+            "status": "PASS"
+        },
+        {
+            "id": "A17",
+            "test": "Vehicle required fields checked",
+            "status": "PASS"
+        },
+        {
+            "id": "A18",
+            "test": "Invalid status rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "A19",
+            "test": "Vehicle model year bounds checked",
+            "status": "PASS"
+        },
+        {
+            "id": "A20",
+            "test": "Driver email validated",
+            "status": "PASS"
+        },
+        {
+            "id": "A21",
+            "test": "Driver phone validated",
+            "status": "PASS"
+        },
+        {
+            "id": "A22",
+            "test": "Licence basic format validated",
+            "status": "PASS"
+        },
+        {
+            "id": "A23",
+            "test": "Missing service schedule reported",
+            "status": "PASS"
+        },
+        {
+            "id": "A24",
+            "test": "Service mileage threshold inclusive",
+            "status": "PASS"
+        },
+        {
+            "id": "A25",
+            "test": "Service warning within 500 miles",
+            "status": "PASS"
+        },
+        {
+            "id": "A26",
+            "test": "Service mileage 501 miles away is current",
+            "status": "PASS"
+        },
+        {
+            "id": "A27",
+            "test": "Service date overdue despite future mileage",
+            "status": "PASS"
+        },
+        {
+            "id": "A28",
+            "test": "Money formats to two decimal places",
+            "status": "PASS"
+        },
+        {
+            "id": "B01",
+            "test": "Vehicle create and read",
+            "status": "PASS"
+        },
+        {
+            "id": "B02",
+            "test": "Duplicate normalised registration rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "B03",
+            "test": "Vehicle edit preserves ID",
+            "status": "PASS"
+        },
+        {
+            "id": "B04",
+            "test": "Decreasing odometer rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "B05",
+            "test": "Search and filter return expected results",
+            "status": "PASS"
+        },
+        {
+            "id": "B06",
+            "test": "Search injection is data not executable SQL",
+            "status": "PASS"
+        },
+        {
+            "id": "B07",
+            "test": "Archive hides vehicle but retains data",
+            "status": "PASS"
+        },
+        {
+            "id": "B08",
+            "test": "Archived vehicle cannot be edited",
+            "status": "PASS"
+        },
+        {
+            "id": "B09",
+            "test": "Archived registration cannot be reused",
+            "status": "PASS"
+        },
+        {
+            "id": "B10",
+            "test": "In Use requires an assignment",
+            "status": "PASS"
+        },
+        {
+            "id": "B11",
+            "test": "Driver create edit and search",
+            "status": "PASS"
+        },
+        {
+            "id": "B12",
+            "test": "Duplicate licence rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "B13",
+            "test": "Assignment sets vehicle In Use",
+            "status": "PASS"
+        },
+        {
+            "id": "B14",
+            "test": "One active driver per vehicle enforced",
+            "status": "PASS"
+        },
+        {
+            "id": "B15",
+            "test": "One active vehicle per driver enforced",
+            "status": "PASS"
+        },
+        {
+            "id": "B16",
+            "test": "Inactive driver cannot be assigned",
+            "status": "PASS"
+        },
+        {
+            "id": "B17",
+            "test": "Expired licence cannot be assigned",
+            "status": "PASS"
+        },
+        {
+            "id": "B18",
+            "test": "Repair vehicle cannot be assigned",
+            "status": "PASS"
+        },
+        {
+            "id": "B19",
+            "test": "Assigned vehicle cannot be archived",
+            "status": "PASS"
+        },
+        {
+            "id": "B20",
+            "test": "Assigned driver cannot be deactivated",
+            "status": "PASS"
+        },
+        {
+            "id": "B21",
+            "test": "Ending assignment retains history and frees vehicle",
+            "status": "PASS"
+        },
+        {
+            "id": "B22",
+            "test": "Ending assignment does not clear Repair",
+            "status": "PASS"
+        },
+        {
+            "id": "B23",
+            "test": "Available not allowed during active assignment",
+            "status": "PASS"
+        },
+        {
+            "id": "B24",
+            "test": "Service history may have a lower historical reading",
+            "status": "PASS"
+        },
+        {
+            "id": "B25",
+            "test": "Higher service mileage updates odometer",
+            "status": "PASS"
+        },
+        {
+            "id": "B26",
+            "test": "Invalid next schedule rolls back inserted record",
+            "status": "PASS"
+        },
+        {
+            "id": "B27",
+            "test": "Future completed work rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "B28",
+            "test": "Repair cost and status saved",
+            "status": "PASS"
+        },
+        {
+            "id": "B29",
+            "test": "Cost aggregates do not multiply joined rows",
+            "status": "PASS"
+        },
+        {
+            "id": "B30",
+            "test": "Out of period records excluded from costs",
+            "status": "PASS"
+        },
+        {
+            "id": "B31",
+            "test": "Foreign keys reject orphan records",
+            "status": "PASS"
+        },
+        {
+            "id": "B32",
+            "test": "Unique active assignment constraint enforced directly",
+            "status": "PASS"
+        },
+        {
+            "id": "B33",
+            "test": "Fictional sample data counts and seed protection",
+            "status": "PASS"
+        },
+        {
+            "id": "C01",
+            "test": "Administrator password verified and hash hidden",
+            "status": "PASS"
+        },
+        {
+            "id": "C02",
+            "test": "Incorrect password rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "C03",
+            "test": "Injection cannot bypass authentication",
+            "status": "PASS"
+        },
+        {
+            "id": "C04",
+            "test": "Five failures trigger account lock",
+            "status": "PASS"
+        },
+        {
+            "id": "C05",
+            "test": "Correct login clears failed attempts",
+            "status": "PASS"
+        },
+        {
+            "id": "C06",
+            "test": "CSRF missing token rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "C07",
+            "test": "CSRF incorrect token rejected",
+            "status": "PASS"
+        },
+        {
+            "id": "C08",
+            "test": "CSRF matching token accepted",
+            "status": "PASS"
+        },
+        {
+            "id": "C09",
+            "test": "CSRF array token rejected",
+            "status": "PASS"
+        }
+    ]
+}

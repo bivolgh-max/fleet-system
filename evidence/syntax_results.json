@@ -1,0 +1,45 @@
+{
+  "runtime": "PHP 8.3 WebAssembly",
+  "checks": [
+    {
+      "file": "app/FleetRepository.php",
+      "result": "OK"
+    },
+    {
+      "file": "app/bootstrap.php",
+      "result": "OK"
+    },
+    {
+      "file": "app/demo_data.php",
+      "result": "OK"
+    },
+    {
+      "file": "app/functions.php",
+      "result": "OK"
+    },
+    {
+      "file": "app/views.php",
+      "result": "OK"
+    },
+    {
+      "file": "cli/create_admin.php",
+      "result": "OK"
+    },
+    {
+      "file": "cli/seed_demo.php",
+      "result": "OK"
+    },
+    {
+      "file": "config/config.example.php",
+      "result": "OK"
+    },
+    {
+      "file": "public/index.php",
+      "result": "OK"
+    },
+    {
+      "file": "tests/run.php",
+      "result": "OK"
+    }
+  ]
+}

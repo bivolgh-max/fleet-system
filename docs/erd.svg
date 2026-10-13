@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="1230" viewBox="0 0 1250 1230">
+<rect width="1250" height="1230" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#17243c} .field{font-size:17px} .title{font-size:20px;font-weight:bold} .edge{stroke:#345fa1;stroke-width:2.5;fill:none} .card{stroke:#bdcadd;stroke-width:1.5;fill:#f7f9fd}</style>
+<text x="20" y="29" font-size="22" font-weight="bold">Fleet relational database design</text>
+<path class="edge" d="M625 415V550"/>
+<text x="635" y="435" font-size="17">1</text>
+<text x="637" y="537" font-size="17">0..*</text>
+<path class="edge" d="M365 640H450"/>
+<text x="379" y="630" font-size="17">1</text>
+<text x="408" y="630" font-size="17">0..*</text>
+<path class="edge" d="M800 280H1030V550"/>
+<text x="813" y="268" font-size="17">1</text>
+<text x="1040" y="535" font-size="17">0..*</text>
+<path class="edge" d="M450 345H400V1050H450"/>
+<text x="417" y="333" font-size="17">1</text>
+<text x="406" y="1038" font-size="17">0..*</text>
+<rect class="card" x="20" y="60" width="320" height="210" rx="8"/>
+<rect x="20" y="60" width="320" height="38" rx="8" fill="#dbe7f7"/>
+<text class="title" x="33" y="86">users</text>
+<text class="field" x="33" y="123">PK id</text>
+<text class="field" x="33" y="143">name</text>
+<text class="field" x="33" y="163">email</text>
+<text class="field" x="33" y="183">password_hash</text>
+<text class="field" x="33" y="203">role</text>
+<text class="field" x="33" y="223">created_at</text>
+<rect class="card" x="450" y="60" width="350" height="355" rx="8"/>
+<rect x="450" y="60" width="350" height="38" rx="8" fill="#dbe7f7"/>
+<text class="title" x="463" y="86">vehicles</text>
+<text class="field" x="463" y="123">PK id</text>
+<text class="field" x="463" y="143">registration</text>
+<text class="field" x="463" y="163">make</text>
+<text class="field" x="463" y="183">model</text>
+<text class="field" x="463" y="203">model_year</text>
+<text class="field" x="463" y="223">mileage</text>
+<text class="field" x="463" y="243">mot_expiry</text>
+<text class="field" x="463" y="263">insurance_expiry</text>
+<text class="field" x="463" y="283">next_service_date</text>
+<text class="field" x="463" y="303">next_service_mileage</text>
+<text class="field" x="463" y="323">status</text>
+<text class="field" x="463" y="343">archived</text>
+<text class="field" x="463" y="363">created_at</text>
+<rect class="card" x="875" y="60" width="350" height="155" rx="8"/>
+<rect x="875" y="60" width="350" height="38" rx="8" fill="#dbe7f7"/>
+<text class="title" x="888" y="86">login_attempts</text>
+<text class="field" x="888" y="123">PK email_key</text>
+<text class="field" x="888" y="143">failures</text>
+<text class="field" x="888" y="163">locked_until</text>
+<rect class="card" x="20" y="530" width="345" height="245" rx="8"/>
+<rect x="20" y="530" width="345" height="38" rx="8" fill="#dbe7f7"/>
+<text class="title" x="33" y="556">drivers</text>
+<text class="field" x="33" y="593">PK id</text>
+<text class="field" x="33" y="613">name</text>
+<text class="field" x="33" y="633">email</text>
+<text class="field" x="33" y="653">phone</text>
+<text class="field" x="33" y="673">licence_number</text>
+<text class="field" x="33" y="693">licence_expiry</text>
+<text class="field" x="33" y="713">active</text>
+<text class="field" x="33" y="733">created_at</text>
+<rect class="card" x="450" y="550" width="350" height="225" rx="8"/>
+<rect x="450" y="550" width="350" height="38" rx="8" fill="#dbe7f7"/>
+<text class="title" x="463" y="576">assignments</text>
+<text class="field" x="463" y="613">PK id</text>
+<text class="field" x="463" y="633">FK vehicle_id</text>
+<text class="field" x="463" y="653">FK driver_id</text>
+<text class="field" x="463" y="673">started_at</text>
+<text class="field" x="463" y="693">ended_at</text>
+<text class="field" x="463" y="713">UQ active_vehicle_id</text>
+<text class="field" x="463" y="733">UQ active_driver_id</text>
+<rect class="card" x="875" y="550" width="350" height="225" rx="8"/>
+<rect x="875" y="550" width="350" height="38" rx="8" fill="#dbe7f7"/>
+<text class="title" x="888" y="576">repairs</text>
+<text class="field" x="888" y="613">PK id</text>
+<text class="field" x="888" y="633">FK vehicle_id</text>
+<text class="field" x="888" y="653">repair_date</text>
+<text class="field" x="888" y="673">description</text>
+<text class="field" x="888" y="693">supplier</text>
+<text class="field" x="888" y="713">cost_pence</text>
+<text class="field" x="888" y="733">created_at</text>
+<rect class="card" x="450" y="925" width="350" height="245" rx="8"/>
+<rect x="450" y="925" width="350" height="38" rx="8" fill="#dbe7f7"/>
+<text class="title" x="463" y="951">maintenance</text>
+<text class="field" x="463" y="988">PK id</text>
+<text class="field" x="463" y="1008">FK vehicle_id</text>
+<text class="field" x="463" y="1028">service_date</text>
+<text class="field" x="463" y="1048">mileage</text>
+<text class="field" x="463" y="1068">description</text>
+<text class="field" x="463" y="1088">supplier</text>
+<text class="field" x="463" y="1108">cost_pence</text>
+<text class="field" x="463" y="1128">created_at</text>
+<text x="20" y="1202" font-size="16">PK primary key | FK foreign key | UQ unique generated active ID | 1 to 0..* means one to zero or many</text>
+<text x="20" y="1223" font-size="15">Users and LoginAttempts support authentication separately; all vehicle history has required parent references.</text>
+</svg>
