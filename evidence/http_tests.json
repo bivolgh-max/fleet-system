@@ -1,14 +1,24 @@
 {
   "runtime": "PHP 8.3.33 WebAssembly HTTP simulation",
   "database": "SQLite test database; not MySQL",
-  "executed_at": "2026-10-13T10:41:26.805Z",
-  "total": 21,
-  "passed": 21,
+  "executed_at": "2026-10-27T13:01:19.039Z",
+  "total": 26,
+  "passed": 26,
   "failed": 0,
   "tests": [
     {
       "id": "H01",
       "test": "Unauthenticated private page redirects to login",
+      "status": "PASS"
+    },
+    {
+      "id": "H-private-security",
+      "test": "Campaign security requires authentication",
+      "status": "PASS"
+    },
+    {
+      "id": "H-private-security_card",
+      "test": "Campaign security_card requires authentication",
       "status": "PASS"
     },
     {
@@ -79,6 +89,21 @@
     {
       "id": "H-vehicle",
       "test": "Authenticated vehicle page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-security",
+      "test": "Authenticated security page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-security_card",
+      "test": "Authenticated security_card page renders",
+      "status": "PASS"
+    },
+    {
+      "id": "H-readonly-security",
+      "test": "Campaign page rejects state-changing requests",
       "status": "PASS"
     },
     {

@@ -18,6 +18,10 @@
       "result": "OK"
     },
     {
+      "file": "app/security_campaign.php",
+      "result": "OK"
+    },
+    {
       "file": "app/views.php",
       "result": "OK"
     },

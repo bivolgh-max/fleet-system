@@ -22,6 +22,10 @@ function record(id,test,ok,details=''){checks.push({id,test,status:ok?'PASS':'FA
 function token(html){return html.match(/name="csrf" value="([^"]+)"/)?.[1]||'';}
 let out=await request('/index.php?page=vehicles',null,false);
 record('H01','Unauthenticated private page redirects to login',out.httpStatusCode===303);
+for(const route of ['security','security_card']){
+  out=await request('/index.php?page='+route,null,false);
+  record('H-private-'+route,'Campaign '+route+' requires authentication',out.httpStatusCode===303&&!out.errors);
+}
 out=await request('/index.php?page=login');
 record('H02','Login page includes CSRF token',out.httpStatusCode===200&&token(out.text).length===64&&!out.errors);pages.login=out.text;
 let csrf=token(out.text);
@@ -30,11 +34,13 @@ record('H03','Login POST without token is rejected',out.httpStatusCode===422&&ou
 const beforeLogin=cookie;
 out=await request('/index.php?page=login',{csrf,email:'qa@example.com',password:'QA-only-password'});
 record('H04','Valid login redirects and regenerates session',out.httpStatusCode===303&&!out.errors&&cookie!==beforeLogin);
-for(const [route,title] of Object.entries({dashboard:'Fleet overview',vehicles:'Vehicles',drivers:'Drivers',assignments:'Driver assignments',maintenance:'Service history',repairs:'Repair history',reports:'Maintenance cost report',vehicle_form:'Add vehicle',driver_form:'Add driver',record_form:'Add maintenance record',vehicle:'Vehicle record'})){
+for(const [route,title] of Object.entries({dashboard:'Fleet overview',vehicles:'Vehicles',drivers:'Drivers',assignments:'Driver assignments',maintenance:'Service history',repairs:'Repair history',reports:'Maintenance cost report',vehicle_form:'Add vehicle',driver_form:'Add driver',record_form:'Add maintenance record',vehicle:'Vehicle record',security:'Protect your fleet records',security_card:'Fleet administrator briefing card'})){
   out=await request('/index.php?page='+route+(route==='vehicle'?'&id=1':''));
   record('H-'+route,'Authenticated '+route+' page renders',out.httpStatusCode===200&&out.text.includes('<h1>'+title+'</h1>')&&!out.errors&&!out.text.includes('could not be loaded'),out.errors);
   pages[route]=out.text;if(route==='dashboard')csrf=token(out.text);
 }
+out=await request('/index.php?page=security',{csrf});
+record('H-readonly-security','Campaign page rejects state-changing requests',out.httpStatusCode===422&&out.text.includes('does not accept changes')&&!out.errors);
 out=await request('/index.php?page=vehicle_form',{csrf,registration:'HTTP01',make:'Ford',model:'Transit',model_year:'2020',mileage:'1000',status:'Available',mot_expiry:'2027-01-01',insurance_expiry:'2027-02-01',next_service_date:'',next_service_mileage:''});
 record('H16','Vehicle form POST saves and redirects',out.httpStatusCode===303&&!out.errors);
 out=await request('/index.php?page=vehicles&search=HTTP01');record('H17','Saved vehicle appears in filtered list',out.text.includes('HTTP01')&&!out.errors);

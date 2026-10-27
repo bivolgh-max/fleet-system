@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require dirname(__DIR__).'/app/bootstrap.php';
 require dirname(__DIR__).'/app/views.php';
+require dirname(__DIR__).'/app/security_campaign.php';
 
 try { $repo=new FleetRepository(connect()); }
 catch(Throwable $ex){
@@ -10,7 +11,7 @@ catch(Throwable $ex){
 }
 try {
     $page=input($_GET,'page')?:'dashboard';
-    $allowed=['dashboard','login','logout','vehicles','vehicle','vehicle_form','archive','drivers','driver_form','assignments','maintenance','repairs','record_form','reports'];
+    $allowed=['dashboard','login','logout','vehicles','vehicle','vehicle_form','archive','drivers','driver_form','assignments','maintenance','repairs','record_form','reports','security','security_card'];
     if(!in_array($page,$allowed,true)){http_response_code(404);$page='dashboard';}
     $id=input($_GET,'id')!==''?integer_value(input($_GET,'id'),'Record ID',1,2147483647):null;
 }catch(InvalidArgumentException $ex){http_response_code(400);start_page('Invalid request',$_SESSION['user']??null,'');notice($ex->getMessage(),true);end_page();exit;}
@@ -53,13 +54,14 @@ if(($_SERVER['REQUEST_METHOD']??'GET')==='POST'){
     }catch(InvalidArgumentException $ex){$error=$ex->getMessage();http_response_code(422);}
     catch(PDOException $ex){$error='This change could not be saved. Check for conflicting records and try again.';http_response_code(409);}
 }
-$title=match($page){'login'=>'Sign in to Fleet Desk','vehicles'=>'Vehicles','vehicle'=>'Vehicle record','vehicle_form'=>$id?'Edit vehicle':'Add vehicle','archive'=>'Archive vehicle','drivers'=>'Drivers','driver_form'=>$id?'Edit driver':'Add driver','assignments'=>'Driver assignments','maintenance'=>'Service history','repairs'=>'Repair history','record_form'=>'Add maintenance record','reports'=>'Maintenance cost report',default=>'Fleet overview'};
+$title=match($page){'login'=>'Sign in to Fleet Desk','vehicles'=>'Vehicles','vehicle'=>'Vehicle record','vehicle_form'=>$id?'Edit vehicle':'Add vehicle','archive'=>'Archive vehicle','drivers'=>'Drivers','driver_form'=>$id?'Edit driver':'Add driver','assignments'=>'Driver assignments','maintenance'=>'Service history','repairs'=>'Repair history','record_form'=>'Add maintenance record','reports'=>'Maintenance cost report','security'=>'Protect your fleet records','security_card'=>'Fleet administrator briefing card',default=>'Fleet overview'};
 start_page($title,$_SESSION['user']??null,$page);
 if($error!=='')notice($error,true);
 if(isset($_SESSION['flash'])){notice($_SESSION['flash']);unset($_SESSION['flash']);}
 $today=date('Y-m-d');
 try {
 switch($page){
+case 'security':case 'security_card':security_campaign($page==='security_card');break;
 case 'login': ?>
 <p>Access your vehicles, maintenance history and upcoming deadlines.</p><form method="post" action="index.php?page=login" class="panel login-form"><?php token_field();field('email','Email',$submitted['email']??'','email',true);field('password','Password','','password',true); ?><button type="submit">Sign in</button></form><p class="muted">Create your administrator with the local CLI setup script. No shared default password is supplied.</p>
 <?php break;

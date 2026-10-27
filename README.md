@@ -13,6 +13,7 @@ Fleet Desk is a local PHP/MySQL application for a fictional small fleet. An admi
 - Services and repairs, exact costs in integer pence, mileage updates and service schedules.
 - MOT/insurance date warnings, service reminders and a dashboard.
 - A cost report with a date range; archived vehicles remain included in historical spending.
+- Fleet-administrator security guidance, a printable briefing card and reminders beside date entry.
 
 Licence format and compliance dates are **not verified** against DVLA, MOT or insurer services. Due soon means expiry within the next 30 days inclusive. Service mileage is due soon within 500 miles and overdue at or above its target.
 
@@ -56,7 +57,7 @@ C:\xampp\php\php.exe tests\run.php
 
 The test suite uses an **in-memory SQLite database**, not your live MySQL database. It prints a JSON result and exits with code 1 if a test fails. A successful SQLite run does not prove MySQL import or concurrent row locking works.
 
-The supplied evidence records 70 PHP validation/repository tests and 21 simulated HTTP checks that passed in PHP 8.3.33 WebAssembly with SQLite. The MySQL/MariaDB installation, Apache access restrictions, genuine browser usability and concurrency checks must still be completed on the target environment. See `docs/manual_test_plan.md`.
+The 27 October 2026 evidence records 70 PHP validation/repository tests and 26 simulated HTTP checks that passed in PHP 8.3.33 WebAssembly with SQLite. Eleven PHP files also passed syntax checks. The MySQL/MariaDB installation, Apache access restrictions, genuine browser usability and concurrency checks must still be completed on the target environment. See `docs/manual_test_plan.md`.
 
 For optional reproduction of the WebAssembly checks, Node.js 24.19.0 was used. The pinned development dependencies and harnesses are supplied. From the project folder, run `npm install --ignore-scripts` and `npm run test:wasm`. This is not needed to run the PHP application. These checks overwrite the generated evidence JSON with a new run and use a fictional isolated database, never your configured MySQL database.
 
@@ -84,6 +85,12 @@ This README provides the project overview and setup instructions. Planning, arch
 The static portfolio source is [`docs/index.html`](docs/index.html). To enable its separate website, open the repository's **Settings > Pages**, choose **Deploy from a branch**, select **main** and **/docs**, then save. See [the publication guide](docs/github_pages.md). The website is not claimed to be live until its URL has been checked.
 
 GitHub Pages serves the portfolio; it does not execute the PHP/MySQL application. Run the application using the XAMPP steps above.
+
+## Security awareness campaign
+
+After signing in, choose **Security guidance**. The guide and its **Open printable briefing card** link address suspicious renewal requests, checking original vehicle evidence, protecting accounts and safely sharing screenshots. The MOT/insurance fields also carry short reminders.
+
+The [campaign plan](docs/security_campaign.md) maps human and technical threats to observable behaviours and a proposed three-scenario evaluation. The materials are implemented; no staff trial or behavioural improvement is claimed.
 
 ## Limitations and future development
 
