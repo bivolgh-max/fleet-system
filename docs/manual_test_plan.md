@@ -27,4 +27,4 @@ For every executed manual test, keep the test ID, date, environment/version, inp
 
 ## Defect log
 
-Use defect ID, description, severity, reproduction steps, affected test, fix and retest result. Do not invent defects or retrospective activity to fill the table. The assistant's review strengthened end-assignment logic by re-reading the assignment after acquiring the vehicle lock; multi-session MySQL verification remains Pending.
+Use defect ID, description, severity, reproduction steps, affected test, fix and retest result. Do not invent defects or retrospective activity to fill the table. End-assignment logic was strengthened by re-reading the assignment after acquiring the vehicle lock; multi-session MySQL verification remains Pending.

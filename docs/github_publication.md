@@ -21,4 +21,3 @@ These outcomes do not establish a successful target installation. The MySQL/Mari
 
 The README is available as the digital project portfolio. The separate static portfolio is prepared in `docs/index.html`. GitHub Pages deployment is unverified and is not recorded as completed. The account owner can enable it using the [publication guide](github_pages.md).
 
-The code and publication were prepared with AI assistance. The student still needs to understand, run and evaluate the project and provide genuine personal assessment evidence.

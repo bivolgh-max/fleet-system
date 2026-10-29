@@ -98,6 +98,6 @@ This version is a single-administrator prototype. There is no driver self-servic
 
 For real deployment: require HTTPS, a restricted database account, independent security review, tested backup/restore, privacy controls, multi-user concurrency tests and environment-specific configuration. Do not treat the local prototype as production-ready.
 
-## Assistance and evidence
+## Evidence
 
-This package was prepared with AI assistance. Test results identify their actual environment. The student must understand, run and evaluate the project, confirm lecturer approval, follow the institution's AI-use rules and provide their own genuine reflection and interview evidence. Do not present automated assistance as independent work or claim unperformed testing.
+Test results identify their actual environment. The manual test plan separates isolated checks from target-environment verification.

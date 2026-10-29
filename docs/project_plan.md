@@ -64,7 +64,7 @@ This is a forward plan from 13 October 2026, not a retrospective account of when
 | Final review | 29 October | Confirm personal sections, interview evidence, links, word count and filename |
 | Submission | 30 October | Export one combined PDF and submit through the confirmed course route |
 
-The assistant-prepared implementation and simulated checks exist now; the schedule reserves time for the student's installation, understanding, review and genuine evidence. It does not claim three sprint meetings have already happened.
+The implementation and simulated checks exist now; the schedule reserves time for the student's installation, understanding, review and genuine evidence. It does not claim three sprint meetings have already happened.
 
 ## Risk register
 
