@@ -80,11 +80,19 @@ Use `public/` as the web root where possible. When the entire folder is placed u
 
 Repository: [bivolgh-max/fleet-system](https://github.com/bivolgh-max/fleet-system).
 
-This README provides the project overview and setup instructions. Planning, architecture, the data dictionary, ERD, user guide and test plan are in [`docs/`](docs/). The public repository contains fictional demonstration data and an example configuration. Personal assessment documents, local credentials, database files and real driver records are excluded.
+This README provides the project overview and setup instructions. Planning, architecture, the data dictionary, ERD, user guide and test plan are in [`docs/`](docs/). The public repository contains fictional demonstration data and an example configuration. The public CV is available in [`docs/career/`](docs/career/). The full assessment report, local credentials, database files and real driver records are excluded.
 
 The static portfolio source is [`docs/index.html`](docs/index.html). To enable its separate website, open the repository's **Settings > Pages**, choose **Deploy from a branch**, select **main** and **/docs**, then save. See [the publication guide](docs/github_pages.md). The website is not claimed to be live until its URL has been checked.
 
 GitHub Pages serves the portfolio; it does not execute the PHP/MySQL application. Run the application using the XAMPP steps above.
+
+## CV and professional profile
+
+[Ghenadie Bivol — CV](docs/career/Ghenadie_Bivol_CV.md) describes the local installation, testing and troubleshooting completed for Fleet Desk.
+
+- [Download CV as PDF](docs/career/Ghenadie_Bivol_CV.pdf)
+- [Download CV as Word](docs/career/Ghenadie_Bivol_CV.docx)
+- [LinkedIn profile](https://www.linkedin.com/in/ghenadie-bivol-6a47202b8/)
 
 ## Security awareness campaign
 
